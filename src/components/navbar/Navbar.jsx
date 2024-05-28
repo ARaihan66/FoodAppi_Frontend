@@ -12,28 +12,28 @@ const Navbar = () => {
       <Link to="/">
         <img src={logo} alt="" className="w-[200px] h-[100px]" />
       </Link>
-      <ul className="flex gap-6 text-xl font-semibold">
+      <ul className="flex gap-8 text-xl font-semibold">
         <li
           onClick={() => setMenu("home")}
-          className={`${menu === "home" ? "underline" : ""}`}
+          className={`${menu === "home" ? "bg-gray-100 p-[5px] rounded-md" : ""}`}
         >
           <Link to="/">Home</Link>
         </li>
         <li
           onClick={() => setMenu("about")}
-          className={`${menu === "about" ? "underline" : ""}`}
+          className={`${menu === "about" ? "bg-gray-100 p-[5px] rounded-md": ""}`}
         >
           <Link to="/">About</Link>
         </li>
         <li
           onClick={() => setMenu("menu")}
-          className={`${menu === "menu" ? "underline" : ""}`}
+          className={`${menu === "menu" ? "bg-gray-100 p-[5px] rounded-md": ""}`}
         >
           <Link to="/">Menu</Link>
         </li>
         <li
           onClick={() => setMenu("contact")}
-          className={`${menu === "contact" ? "underline" : ""}`}
+          className={`${menu === "contact" ? "bg-gray-100 p-[5px] rounded-md" : ""}`}
         >
           <Link to="/">Contact Us</Link>
         </li>
