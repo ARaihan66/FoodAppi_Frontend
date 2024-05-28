@@ -43,7 +43,7 @@ const Navbar = () => {
         <img src={search_icon} alt="search-icon" className="h-[20px] w-[20px]"/>
         <div>
           <img src={basket_icon} alt="" className="h-[20px] w-[20px]"/>
-          <div className="absolute bg-orange-900 min-h-[10px] min-w-[10px] rounded-full bottom-[50%] left-[40%] text-white p-[3px] font-thin">
+          <div className="absolute bg-orange-900 min-h-[10px] min-w-[10px] rounded-full bottom-[50%] left-[40%] text-white p-[3px] font-bold">
             50
           </div>
         </div>
