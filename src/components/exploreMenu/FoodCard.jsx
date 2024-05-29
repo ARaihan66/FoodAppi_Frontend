@@ -1,10 +1,11 @@
-import React from 'react'
+
 import { IoIosHeartEmpty } from "react-icons/io";
 
-const FoodCard = ({food_list}) => {
+const FoodCard = ({foodItem}) => {
+
   return (
     <div className='flex justify-around items-center flex-wrap'>
-        {food_list && food_list.map((item, index)=>{
+        {foodItem && foodItem.map((item, index)=>{
            return(
             <div key={index} className='bg-gray-200 h-[400px] w-[300px] my-[20px] rounded-xl'>
             <img src={item.image} alt="food-image" className='h-[60%] w-[100%] p-[10px]'/>
