@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import food_1 from "../../assets/food_asset/food_1.png";
 import food_2 from "../../assets/food_asset/food_2.png";
 import food_3 from "../../assets/food_asset/food_3.png";
@@ -32,7 +32,9 @@ import food_30 from "../../assets/food_asset/food_30.png";
 import food_31 from "../../assets/food_asset/food_31.png";
 import food_32 from "../../assets/food_asset/food_32.png";
 import FoodCard from "./FoodCard";
+import { useDispatch, useSelector } from "react-redux";
 
+import { setCategory } from "../../redux/slices/CategorySlice";
 const food_list = [
   {
     _id: "1",
@@ -325,15 +327,29 @@ const food_list = [
 ];
 
 const ExploreMenu = () => {
+
     const [foodItem, setFoodItem] = useState(food_list);
+
+    const selectedCategory = useSelector((state)=> state.category.category)
+
+    const dispatch = useDispatch(); 
   
     const menuItems = [...new Set(food_list.map((Val) => Val.category))];
-  
-    const handleFilterItem = (category) => {
-      const filteredFood = food_list.filter((food) => food.category === category);
-      setFoodItem(filteredFood);
-    };
-  
+
+    useEffect(() => {
+        handleFilterFood();
+      }, [selectedCategory]);
+    
+      const handleFilterFood = () => {
+        if (selectedCategory === "All") {
+          setFoodItem(food_list);
+        } else {
+          const newFoodItem = food_list.filter(
+            (item) => item.category === selectedCategory
+          );
+          setFoodItem(newFoodItem);
+        }
+      };
     return (
       <section id="explore">
         <h2 className="font-bold text-3xl my-[20px]">Explore Our Menu</h2>
@@ -343,8 +359,10 @@ const ExploreMenu = () => {
         </p>
         <div className="flex justify-between my-[20px]">
           <button
-            onClick={() => setFoodItem(food_list)}
-            className="bg-orange-400 h-[100px] w-[100px] rounded-full hover:bg-orange-300"
+            onClick={() => {
+                dispatch(setCategory("All"));
+            }}
+            className={`bg-orange-400 h-[100px] w-[100px] rounded-full hover:bg-orange-300 ${selectedCategory==="All" && "bg-red-600 text-white"}`}
           >
             All
           </button>
@@ -352,9 +370,11 @@ const ExploreMenu = () => {
             menuItems.map((category, index) => {
               return (
                 <button
-                  onClick={() => handleFilterItem(category)}
+                  onClick={() =>{ 
+                    dispatch(setCategory(category))
+                }}
                   key={index}
-                  className="bg-orange-400 h-[100px] w-[100px] rounded-full hover:bg-orange-300"
+                  className={`bg-orange-400 h-[100px] w-[100px] rounded-full hover:bg-orange-300 ${selectedCategory === category && "bg-red-600 text-white"}`}
                 >
                   {category}
                 </button>
