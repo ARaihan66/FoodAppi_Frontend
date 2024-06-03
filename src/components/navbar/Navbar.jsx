@@ -23,7 +23,7 @@ const Navbar = () => {
           onClick={() => setMenu("about")}
           className={`${menu === "about" ? "bg-gray-100 p-[5px] rounded-md": ""}`}
         >
-          <Link to="/">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li
           onClick={() => setMenu("menu")}
@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="flex justify-center items-center gap-10 relative ">
         <img src={search_icon} alt="search-icon" className="h-[20px] w-[20px]"/>
         <div>
-          <img src={basket_icon} alt="" className="h-[20px] w-[20px]"/>
+         <Link to="/cart"> <img src={basket_icon} alt="" className="h-[20px] w-[20px]"/></Link>
           <div className="absolute bg-orange-900 min-h-[10px] min-w-[10px] rounded-full bottom-[50%] left-[40%] text-white p-[3px] font-bold">
             50
           </div>
