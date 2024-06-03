@@ -1,4 +1,3 @@
-import React from "react";
 import food from "../assets/food_asset/food_3.png";
 import { MdDelete } from "react-icons/md";
 import { FaPlus, FaMinus  } from "react-icons/fa";
