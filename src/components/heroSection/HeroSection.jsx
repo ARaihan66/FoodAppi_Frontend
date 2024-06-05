@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const HeroSection = () => {
   return (
-    <div className='w-full h-[80vh] relative'>
+    <div className='w-full h-[80vh] relative my-5'>
         <img src={bg_pic} alt="" className='w-[100%] h-[100%] rounded-lg opacity-70'/>
         <div className='absolute top-[30%] left-[10%]'>
             <h2 className='text-white text-3xl uppercase bg-blue-400 inline-block p-[10px] rounded-lg my-[20px]'>Order Your Favourite Food from FoodAppi</h2>

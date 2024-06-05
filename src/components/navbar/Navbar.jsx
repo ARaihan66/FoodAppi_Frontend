@@ -3,12 +3,19 @@ import logo from "../../assets/food_asset/food-appi-logo.png";
 import { Link } from "react-router-dom";
 import search_icon from "../../assets/food_asset/search_icon.png";
 import basket_icon from "../../assets/food_asset/basket_icon.png";
+import { useSelector } from "react-redux";
+
 
 const Navbar = () => {
+  const cartItems = useSelector((state) => state.cart.cart);
+  const totalQty = cartItems.reduce((totalQty, item) => {
+    return totalQty + item.qty;
+  }, 0);
+
   const [menu, setMenu] = useState("home");
 
   return (
-    <div className="flex justify-between items-center py-[20px]">
+    <div className="sticky top-0 rounded flex justify-between items-center py-[15px] bg-orange-200 z-10">
       <Link to="/">
         <img src={logo} alt="" className="w-[200px] h-[100px]" />
       </Link>
@@ -39,15 +46,15 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="flex justify-center items-center gap-10 relative ">
+      <div className="flex justify-center items-center gap-10 relative pr-5">
         <img src={search_icon} alt="search-icon" className="h-[20px] w-[20px]"/>
         <div>
          <Link to="/cart"> <img src={basket_icon} alt="" className="h-[20px] w-[20px]"/></Link>
           <div className="absolute bg-orange-900 min-h-[10px] min-w-[10px] rounded-full bottom-[50%] left-[40%] text-white p-[3px] font-bold">
-            50
+            {totalQty}
           </div>
         </div>
-        <button className="bg-orange-400 border-solid	border-black rounded-md py-[5px] px-[10px] transition duration-300  hover:text-white">
+        <button className="bg-orange-400 border-solid	border-black rounded-md py-[5px] px-[10px] transition duration-300 hover:text-white">
           Sign up
         </button>
       </div>
