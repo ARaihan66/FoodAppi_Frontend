@@ -3,6 +3,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../redux/slices/CartSlice";
+import toast from "react-hot-toast";
 
 const FoodCard = ({ foodItem }) => {
   //const food = useSelector((state)=> console.log(state) )
@@ -32,6 +33,7 @@ const FoodCard = ({ foodItem }) => {
               <button
                   onClick={() => {
                     dispatch(addToCart({ id: _id, image, name, price, qty: 1 }));
+                    toast.success("Item added to the cart")
                   }}
                   className="bg-orange-500 p-[10px] rounded-full hover:bg-orange-400"
                 >

@@ -80,7 +80,7 @@ const Cart = () => {
           </div>
         ))
       ) : (
-        <p>Your cart is empty.</p>
+        <p className="text-center my-[20px] font-semibold">Your cart is empty.</p>
       )}
       <hr className="my-[10px]"/>
       <div className="flex justify-between ">

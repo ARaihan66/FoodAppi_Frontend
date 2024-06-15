@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import search_icon from "../../assets/food_asset/search_icon.png";
 import basket_icon from "../../assets/food_asset/basket_icon.png";
 import { useSelector } from "react-redux";
+import { AiOutlineClose } from "react-icons/ai";
 
 
 const Navbar = () => {
@@ -11,6 +12,12 @@ const Navbar = () => {
   const totalQty = cartItems.reduce((totalQty, item) => {
     return totalQty + item.qty;
   }, 0);
+
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
+
+  const toggleSearchBar = () => {
+    setIsSearchBarVisible(!isSearchBarVisible);
+  };
 
   const [menu, setMenu] = useState("home");
 
@@ -47,8 +54,23 @@ const Navbar = () => {
       </ul>
 
       <div className="flex justify-center items-center gap-10 relative pr-5">
-        <img src={search_icon} alt="search-icon" className="h-[20px] w-[20px]"/>
+        <img  onClick={toggleSearchBar}  src={search_icon} alt="search-icon" className="h-[20px] w-[20px] cursor-pointer"/>
         <div>
+        {isSearchBarVisible && (
+        <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 z-40 flex justify-center items-center">
+          <div className="bg-white rounded-lg shadow-lg p-4">
+            <AiOutlineClose onClick={toggleSearchBar} className="fixed text-white text-3xl cursor-pointer right-10 top-10"/>
+            <input
+              type="text"
+              placeholder="Search item here..."
+              className="w-[500px] p-2 rounded-l-md border-2 border-r-0 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+            />
+            <button className="p-2 bg-orange-500 text-white rounded-r-md border-2 border-orange-500 hover:bg-orange-600 transition duration-300">
+              Search
+            </button>
+          </div>
+        </div>
+      )}
          <Link to="/cart"> <img src={basket_icon} alt="" className="h-[20px] w-[20px]"/></Link>
           <div className="absolute bg-orange-900 min-h-[10px] min-w-[10px] rounded-full bottom-[50%] left-[40%] text-white p-[3px] font-bold">
             {totalQty}

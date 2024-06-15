@@ -6,6 +6,7 @@ import Navbar from './components/navbar/Navbar'
 import FoodDetails from './pages/FoodDetails'
 import CartPage from './pages/CartPage'
 import { Toaster } from 'react-hot-toast';
+import Footer from './components/footer/Footer'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/order' element={<PlaceOrder/>} />
       </Routes>
       <Toaster />
+      <Footer/>
       </BrowserRouter>
     </div>
   )
