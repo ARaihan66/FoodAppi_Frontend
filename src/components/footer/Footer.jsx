@@ -9,8 +9,8 @@ import copy from "../../assets/copyright/copyright.png"
 const Footer = () => {
 
   return (
-    <div className="bg-yellow-100 rounded-md">
-    <div className="flex justify-center items-center gap-10 my-[40px]p-10">
+    <div className="bg-yellow-100 rounded-md p-10 my-[20px]">
+    <div className="flex justify-center items-center gap-10">
     <div className="flex-1 flex flex-col">
     <div className="flex justify-center items-center">
     <img src={logo} alt="foodappi" className=" w-[100px] h-[100px] my-[10px]"/>

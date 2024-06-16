@@ -1,19 +1,17 @@
-import HeroSection from '../components/heroSection/HeroSection'
-import ExploreMenu from '../components/exploreMenu/ExploreMenu'
-import { useEffect } from 'react';
+import HeroSection from "../components/heroSection/HeroSection";
+import ExploreMenu from "../components/exploreMenu/ExploreMenu";
+import TopRatedFood from "../components/topFoodItem/TopRatedFood";
+
+
 
 const Home = () => {
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div>
-        <HeroSection/>
-        <ExploreMenu/>
+      <HeroSection />
+      <ExploreMenu />
+     <TopRatedFood/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -22,7 +22,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState("home");
 
   return (
-    <div className="sticky top-0 rounded flex justify-between items-center py-[15px] bg-orange-200 z-10">
+    <div className="sticky top-0 rounded flex justify-between items-center py-[15px] bg-gray-50 z-10 shadow">
       <Link to="/">
         <img src={logo} alt="" className="w-[200px] h-[100px]" />
       </Link>
