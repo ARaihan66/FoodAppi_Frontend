@@ -12,7 +12,7 @@ import food_3 from '../../assets/food_asset/food_3.png';
 const TopRatedFood = () => {
   return (
     <div className="container mx-auto my-10">
-      <h3 className="font-bold text-2xl my-10">Top Rated Food Items</h3>
+      <h3 className="font-bold text-2xl my-5">Top Rated Food Items</h3>
       <Swiper
         spaceBetween={30}
         slidesPerView={3}
