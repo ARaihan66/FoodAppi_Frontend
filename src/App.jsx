@@ -7,6 +7,7 @@ import FoodDetails from './pages/FoodDetails'
 import CartPage from './pages/CartPage'
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer/Footer'
+import About from './pages/About'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<About/>} />
         <Route path='/food-detail' element={<FoodDetails/>} />
         <Route path='/cart' element={<CartPage/>} />
         <Route path='/order' element={<PlaceOrder/>} />
