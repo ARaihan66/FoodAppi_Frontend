@@ -5,23 +5,26 @@ import search_icon from "../../assets/food_asset/search_icon.png";
 import basket_icon from "../../assets/food_asset/basket_icon.png";
 import { useSelector } from "react-redux";
 import { AiOutlineClose } from "react-icons/ai";
+import Auth from "../auth/Auth";
 
 
 const Navbar = () => {
+  const [menu, setMenu] = useState("home");
+  const [auth, setAuth] = useState(false);
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   const cartItems = useSelector((state) => state.cart.cart);
   const totalQty = cartItems.reduce((totalQty, item) => {
     return totalQty + item.qty;
   }, 0);
 
-  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
-
   const toggleSearchBar = () => {
     setIsSearchBarVisible(!isSearchBarVisible);
   };
 
-  const [menu, setMenu] = useState("home");
 
   return (
+    <>
+    {auth && <Auth setAuth={setAuth}/>}
     <div className="sticky top-0 rounded flex justify-between items-center py-[15px] bg-gray-50 z-10 shadow">
       <Link to="/">
         <img src={logo} alt="" className="w-[200px] h-[100px]" />
@@ -76,11 +79,11 @@ const Navbar = () => {
             {totalQty}
           </div>
         </div>
-        <button className="bg-orange-400 border-solid	border-black rounded-md py-[5px] px-[10px] transition duration-300 hover:text-white">
-          Sign up
+        <button onClick={()=> setAuth(true)} className="bg-orange-400 border-solid	border-black rounded-md py-[5px] px-[10px] transition duration-300 hover:text-white">
+          Sign Up
         </button>
       </div>
-    </div>
+    </div></>
   );
 };
 
