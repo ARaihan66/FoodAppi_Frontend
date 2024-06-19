@@ -1,9 +1,9 @@
 import HeroSection from "../components/heroSection/HeroSection";
 import ExploreMenu from "../components/exploreMenu/ExploreMenu";
 import TopRatedFood from "../components/topFoodItem/TopRatedFood";
-import MapLocation from "../components/mapLocation/MapLocation";
 import { Faqs } from "../components/faqs/Faqs";
 import ClientReview from "../components/clientReview/ClientReview";
+import ClientReviewComment from "../components/clientComment/ClientReviewComment";
 
 
 
@@ -14,8 +14,8 @@ const Home = () => {
       <ExploreMenu />
      <TopRatedFood/>
      <ClientReview/>
+     <ClientReviewComment/>
      <Faqs/>
-     <MapLocation/>
     </div>
   );
 };

@@ -46,13 +46,13 @@ const Navbar = () => {
           onClick={() => setMenu("menu")}
           className={`${menu === "menu" ? "bg-gray-100 p-[5px] rounded-md": ""}`}
         >
-          <Link to="/">Menu</Link>
+          <Link to="/menu">Menu</Link>
         </li>
         <li
           onClick={() => setMenu("contact")}
           className={`${menu === "contact" ? "bg-gray-100 p-[5px] rounded-md" : ""}`}
         >
-          <Link to="/">Contact Us</Link>
+          <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
 

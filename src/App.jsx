@@ -8,6 +8,8 @@ import CartPage from './pages/CartPage'
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer/Footer'
 import About from './pages/About'
+import MenuPage from './pages/MenuPage'
+import ContactPage from './pages/ContactPage'
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/menu' element={<MenuPage/>} />
+        <Route path='/contact' element={<ContactPage/>} />
         <Route path='/food-detail' element={<FoodDetails/>} />
         <Route path='/cart' element={<CartPage/>} />
         <Route path='/order' element={<PlaceOrder/>} />
