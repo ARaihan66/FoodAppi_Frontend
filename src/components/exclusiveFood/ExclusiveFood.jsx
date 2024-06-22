@@ -157,7 +157,7 @@ const ExclusiveFood = () => {
 
   return (
     <div>
-       <h3 className="font-bold text-2xl my-5">Exclusive Food</h3>
+       <h3 className="font-bold text-2xl my-5">Exclusive Food Items</h3>
       <div className="flex justify-between items-center flex-wrap">
         {exclusiveItems &&
           exclusiveItems.map((item, index) => {

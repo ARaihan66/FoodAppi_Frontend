@@ -11,6 +11,7 @@ import About from './pages/About'
 import MenuPage from './pages/MenuPage'
 import ContactPage from './pages/ContactPage'
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/cart' element={<CartPage/>} />
         <Route path='/order' element={<PlaceOrder/>} />
         <Route path='/terms-conditions' element={<TermsAndConditionsPage/>} />
+        <Route path='/privacy-policy' element={<PrivacyPolicyPage/>} />
       </Routes>
       <Toaster />
       <Footer/>

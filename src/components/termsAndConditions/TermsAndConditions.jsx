@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 const TermsAndConditions = () => {
-  
+
   useEffect(()=>{
     window.scrollTo(0,0)
   },[])
@@ -84,8 +84,8 @@ const TermsAndConditions = () => {
       <h2 className="font-bold text-2xl mt-5">13. Contact Us</h2>
       <p>
         If you have any questions about these Terms and Conditions, please contact us at:<br />
-        - **Email:** <a href="mailto:legal@foodappi.com" className="text-blue-500">legal@foodappi.com</a><br />
-        - **Phone:** <a href="tel:+18004567890" className="text-blue-500">+1 (800) 456-7890</a>
+        - **Email:** <a href="mailto:foodappi2023@gmail.com" className="text-blue-500">foodappi2023@gmail.com</a><br />
+        - **Phone:** <a href="tel:+8801767013859" className="text-blue-500">+88 01767013859</a>
       </p>
     </div>
   );

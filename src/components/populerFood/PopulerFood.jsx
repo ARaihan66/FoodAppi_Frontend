@@ -161,7 +161,7 @@ const PopulerFood = () => {
       Our aim is to provide quality service and your satisfaction is our priority. At FoodAppi, we strive to create a seamless and enjoyable experience from browsing our app to enjoying your meal.We partner with top local restaurants to ensure you receive fresh, safe, and delicious meals. Our diverse menu caters to all tastes and dietary preferences.Give your order and take satisfaction from us. We offer convenient payment methods and real-time order tracking, so you know exactly when to expect your food.Thank you for choosing FoodAppi. We look forward to serving you.
       </p>
 
-       <h3 className="font-bold text-2xl my-5">Popular Food</h3>
+       <h3 className="font-bold text-2xl my-5">Popular Food Items</h3>
       <div className="flex justify-between items-center flex-wrap">
         {popularItems &&
           popularItems.map((item, index) => {
