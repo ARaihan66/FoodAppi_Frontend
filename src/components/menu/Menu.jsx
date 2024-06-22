@@ -85,25 +85,12 @@ const Menu = () => {
                     >
                       {item.name}
                     </Typography>
-                    {/*<div className="flex justify-center gap-2">
-                  <Button size="lg" color="white">
-                    Explore
-                  </Button>
-                  <Button size="lg" color="white" variant="text">
-                    Gallery
-                  </Button>
-                </div>*/}
                   </div>
                 </div>
               </div>
             );
           })}
       </Carousel>
-
-      <div>
-        <h3 className="font-bold text-2xl my-5">Populer Menu's</h3>
-        
-      </div>
     </div>
   );
 };

@@ -352,12 +352,7 @@ const ExploreMenu = () => {
         }
       };
     return (
-      <section id="explore">
-        <h2 className="font-bold text-3xl my-[20px]">Explore Our Menu</h2>
-        <p>
-          Our aim is to provide quality service and your satisfaction is our
-          priority. Give your order and take satisfaction from us.
-        </p>
+      <div>
         <div className="flex justify-between my-[20px]">
           <button
             onClick={() => {
@@ -383,7 +378,7 @@ const ExploreMenu = () => {
             })}
         </div>
         <FoodCard foodItem={foodItem} />
-      </section>
+      </div>
     );
   };
   

@@ -10,6 +10,8 @@ import Footer from './components/footer/Footer'
 import About from './pages/About'
 import MenuPage from './pages/MenuPage'
 import ContactPage from './pages/ContactPage'
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage'
+
 
 const App = () => {
   return (
@@ -24,6 +26,7 @@ const App = () => {
         <Route path='/food-detail' element={<FoodDetails/>} />
         <Route path='/cart' element={<CartPage/>} />
         <Route path='/order' element={<PlaceOrder/>} />
+        <Route path='/terms-conditions' element={<TermsAndConditionsPage/>} />
       </Routes>
       <Toaster />
       <Footer/>
