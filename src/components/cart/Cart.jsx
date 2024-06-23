@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import toast from 'react-hot-toast';
 import { removeFromCart, incrementQty, decrementQty } from "../../redux/slices/CartSlice";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -88,7 +89,7 @@ const Cart = () => {
         <h3 className="font-bold">Total Items : {totalPrice}</h3>
       </div>
       <div className="flex justify-center items-center my-[5px]">
-        <button className="uppercase font-bold py-[10px] px-[50px] bg-orange-600 rounded-full">Check Out</button>
+        <Link to="/order" className="uppercase font-bold py-[10px] px-[50px] bg-orange-600 rounded-full">Check Out</Link>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import PlaceOrder from './pages/PlaceOrder'
 import Navbar from './components/navbar/Navbar'
 import FoodDetails from './pages/FoodDetails'
 import CartPage from './pages/CartPage'
@@ -12,6 +11,7 @@ import MenuPage from './pages/MenuPage'
 import ContactPage from './pages/ContactPage'
 import TermsAndConditionsPage from './pages/TermsAndConditionsPage'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
+import PlaceOrderPage from './pages/PlaceOrderPage'
 
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
         <Route path='/contact' element={<ContactPage/>} />
         <Route path='/food-detail' element={<FoodDetails/>} />
         <Route path='/cart' element={<CartPage/>} />
-        <Route path='/order' element={<PlaceOrder/>} />
+        <Route path='/order' element={<PlaceOrderPage/>} />
         <Route path='/terms-conditions' element={<TermsAndConditionsPage/>} />
         <Route path='/privacy-policy' element={<PrivacyPolicyPage/>} />
       </Routes>
